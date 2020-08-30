@@ -5,12 +5,13 @@ b = 4321
 data = []
 whole_data = {}
 
-print("Press 1: To Create Account")
-print("Press 2: To Check Balance")
-print("Press 3: To Deposit")
-print("Press 4: To Withdraw")
-print("Press 0: To Exit")
-print("press 5: To Admin")
+print("Press 1: To Create Account");
+print("Press 2: To Check Balance");
+print("Press 3: To Deposit");
+print("Press 4: To Withdraw");
+print("Press 0: To Exit");
+print("press 5: To Admin");
+print("*****************************************************************************************************");
 
 while True:
     choice = input("Enter choice: ");
@@ -47,7 +48,7 @@ while True:
             withdraw_acc_no = int(input("Enter Your Account Number: "));
             if(withdraw_acc_no in whole_data):
                 print("welcome {}".format(whole_data[withdraw_acc_no][0]));
-                withdraw = int(input("Enter Amount to withdraw"));
+                withdraw = int(input("Enter Amount to withdraw: "));
                 if(whole_data[withdraw_acc_no][1] >= withdraw):
                     new_data = whole_data[withdraw_acc_no][1]-withdraw
                     whole_data[withdraw_acc_no][1] = new_data
