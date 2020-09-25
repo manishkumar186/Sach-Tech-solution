@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Fonticon/css/all.min.css">
+    <script src="bootstrap/jquery.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mt-5">
+                <div class="input-group">
+                    <input type="password" placeholder="Enter password" class="form-control" id="p">
+                    <div class="input-group-append">
+                        <span class="input-group-text"><i class="fa fa-eye" aria-hidden="true" onclick="myFun()" id="manish"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function myFun()
+        {
+            let pass = document.getElementById("p").getAttribute("type")
+
+            if(pass=="text")
+            {
+                $("#manish").removeClass("fa fa-eye-slash").addClass("fa fa-eye")
+                $("#p").attr("type","password");
+
+            }
+            else
+            {
+                $("#manish").removeClass("fa fa-eye").addClass("fa fa-eye-slash") 
+                $("#p").attr("type","text");
+
+            }
+
+        }
+
+    </script>
+
+    
+</body>
+</html>
